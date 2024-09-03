@@ -23,6 +23,8 @@ class Menu:
             self.window.blit(source=self.surf, dest=self.rect)
             self.menu_text(50, "Mountain", C_ORANGE, ((WIN_WIDTH / 2), 70))
             self.menu_text(50, "Shooter", C_ORANGE, ((WIN_WIDTH / 2), 120))
+            self.menu_text(20, "Erick Almeida", C_WHITE, ((WIN_WIDTH / 10), 300))
+            self.menu_text(20, "RU 4733018", C_WHITE, ((WIN_WIDTH / 4), 300))
 
             for i in range(len(MENU_OPTION)):
                 if i == menu_option:
@@ -51,7 +53,7 @@ class Menu:
                         return MENU_OPTION[menu_option]
 
     def menu_text(self, text_size: int, text: str, text_color: tuple, text_center_pos: tuple):
-        text_font: Font = pygame.font.SysFont(name="Lucida Sans Typewriter", size=text_size)
+        text_font: Font = pygame.font.SysFont(name="ErickAlmeida", size=text_size)
         text_surf: Surface = text_font.render(text, True, text_color).convert_alpha()
         text_rect: Rect = text_surf.get_rect(center=text_center_pos)
         self.window.blit(source=text_surf, dest=text_rect)
